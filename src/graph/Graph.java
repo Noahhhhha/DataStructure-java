@@ -1,4 +1,4 @@
-package Graph;
+package graph;
 
 /**
  * 图类
@@ -99,6 +99,10 @@ public class Graph {
             vertexList[j].wasVisited = false;
     }
 
+    //拓扑排序 有向无环图
+    public void topo(){
+        int orig_nVerts = nVerts;
+    }
 
     //获取指定顶点相邻接的一个未被访问过的顶点
     private int getAdjUnvisitedVertex(int v){
