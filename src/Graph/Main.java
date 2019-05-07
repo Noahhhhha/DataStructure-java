@@ -2,7 +2,7 @@ package Graph;
 /**
  * 图
  */
-public class main {
+public class Main {
     public static void main(String[] args) {
         Graph theGraph = new Graph();
         theGraph.addVertex('A');
@@ -20,6 +20,7 @@ public class main {
         theGraph.dfs();
         System.out.println("基于栈的广度遍历：");
         theGraph.bfs();
-
+        System.out.println("最小生成树：");
+        theGraph.mst();
     }
 }

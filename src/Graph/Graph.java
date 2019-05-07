@@ -78,6 +78,28 @@ public class Graph {
             vertexList[j].wasVisited = false;
     }
 
+    //最小生成树
+    public void mst(){
+        vertexList[0].wasVisited = true;
+        theStack.push(0);
+        while (!theStack.isEmpty()){
+            int currentVertex = theStack.peek();
+            int v = getAdjUnvisitedVertex(currentVertex);
+            if (v == -1)
+                theStack.pop();
+            else {
+                vertexList[v].wasVisited = true;
+                theStack.push(v);
+                displayVertex(currentVertex);
+                displayVertex(v);
+                System.out.println(" ");
+            }
+        }
+        for (int j=0; j<nVerts; j++)
+            vertexList[j].wasVisited = false;
+    }
+
+
     //获取指定顶点相邻接的一个未被访问过的顶点
     private int getAdjUnvisitedVertex(int v){
         for(int j=0; j<nVerts; j++)
